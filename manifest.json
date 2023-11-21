@@ -1,0 +1,53 @@
+{
+  "id": "c43b0bb9-029c-4d67-951e-ca3a3d0a7bf0",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "name": "linear",
+      "title": "linear",
+      "products": [
+        "chart",
+        "spark"
+      ],
+      "codePath": "editorextensions/linear/bin/extension.js",
+      "scopes": [
+        "READ",
+        "WRITE",
+        "DOWNLOAD",
+        "SHOW_MODAL",
+        "CUSTOM_UI",
+        "NETWORK"
+      ]
+    }
+  ],
+  "shapeLibraries": [],
+  "oauthProviders": [
+    {
+      "name": "linear",
+      "title": "Linear",
+      "authorizationUrl": "https://linear.app/oauth/authorize",
+      "tokenUrl": "https://api.linear.app/oauth/token",
+      "scopes": [
+        "read",
+        "write",
+        "issues:create"
+      ],
+      "domainWhitelist": [
+        "https://api.linear.app",
+        "https://linear.app"
+      ],
+      "clientAuthentication": "clientParameters"
+    }
+  ],
+  "dataConnectors": [
+    {
+      "name": "linear",
+      "oauthProviderName": "linear",
+      "callbackBaseUrl": "http://localhost:3001/?kind=action&name=",
+      "dataActions": {
+        "Import": "import",
+        "Query": "query"
+      }
+    }
+  ]
+}
