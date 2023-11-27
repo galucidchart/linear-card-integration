@@ -1,5 +1,6 @@
-import { CollectionDefinition, DataSourceProxy, EditorClient, ExtensionCardFieldDefinition, FieldDisplayType, HorizontalBadgePos, LucidCardIntegration, OnClickHandlerKeys, SerializedFieldType } from 'lucid-extension-sdk';
+import { DataSourceProxy, EditorClient, FieldDisplayType, HorizontalBadgePos, LucidCardIntegration, OnClickHandlerKeys } from 'lucid-extension-sdk';
 import { IssueCollectionFieldNames } from '../../../common/constants';
+import { LinearImportModal } from './linearimportmodal';
 export declare class LinearCardIntegration extends LucidCardIntegration {
     private readonly editorClient;
     private linearIntegrationClient;
@@ -8,6 +9,7 @@ export declare class LinearCardIntegration extends LucidCardIntegration {
     label: string;
     itemLabel: string;
     itemsLabel: string;
+    importModal: LinearImportModal;
     constructor(editorClient: EditorClient);
     fieldConfiguration: {
         getAllFields: (dataSource: DataSourceProxy) => Promise<string[]>;
@@ -65,18 +67,4 @@ export declare class LinearCardIntegration extends LucidCardIntegration {
             }[];
         };
     }>;
-    importModal: {
-        getSearchFields: (searchSoFar: Map<string, SerializedFieldType>) => Promise<ExtensionCardFieldDefinition[]>;
-        search: (searchFields: Map<string, SerializedFieldType>) => Promise<{
-            partialImportMetadata: {
-                collectionId: string;
-                syncDataSourceId?: string;
-            };
-            data: CollectionDefinition;
-            fields: ExtensionCardFieldDefinition[];
-        }>;
-        import: (primaryKeys: string[], searchFields: Map<string, SerializedFieldType>) => Promise<any>;
-    };
-    private searchCallbacks;
-    private getIssuesList;
 }

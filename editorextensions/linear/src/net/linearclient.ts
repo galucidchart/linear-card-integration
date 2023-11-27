@@ -102,8 +102,6 @@ export class LinearCardIntegrationClient {
 
     public async importIssues(issuesIds: string[]): Promise<CollectionProxy> {
         const organizationId = await this.getOrganizationId();
-        console.log(organizationId);
-        console.log(this.client);
         await this.client.performDataAction({
             dataConnectorName: DATA_CONNECTOR_NAME,
             syncDataSourceIdNonce: organizationId,
@@ -118,7 +116,6 @@ export class LinearCardIntegrationClient {
             ISSUES_COLLECTION_NAME,
             issuesIds,
         );
-        console.log(collection);
 
         return collection;
 

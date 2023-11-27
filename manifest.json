@@ -18,6 +18,23 @@
         "CUSTOM_UI",
         "NETWORK"
       ]
+    },
+    {
+      "name": "test-linear-oauth",
+      "title": "test-linear-oauth",
+      "products": [
+        "chart",
+        "spark"
+      ],
+      "codePath": "editorextensions/test-linear-oauth/bin/extension.js",
+      "scopes": [
+        "READ",
+        "WRITE",
+        "DOWNLOAD",
+        "SHOW_MODAL",
+        "CUSTOM_UI",
+        "NETWORK"
+      ]
     }
   ],
   "shapeLibraries": [],
