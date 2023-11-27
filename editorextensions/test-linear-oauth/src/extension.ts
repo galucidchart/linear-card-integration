@@ -17,7 +17,6 @@ client.registerAction('testRequest', async () => {
         data: '{"query":"query Me {\n  viewer {\n    id\n    name\n    email\n  }\n}","variables":{}}',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer lin_oauth_c24bcce279969d7e8c9170513f57110119a6418c603e233ebbbdcb8ea1e2477f"
         }        
 
         
