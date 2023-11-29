@@ -33,7 +33,8 @@
         "DOWNLOAD",
         "SHOW_MODAL",
         "CUSTOM_UI",
-        "NETWORK"
+        "NETWORK",
+        "OAUTH_TOKEN"
       ]
     }
   ],
